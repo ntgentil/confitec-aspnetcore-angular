@@ -1,9 +1,0 @@
-C:\dev-gentil\Confitec\ConfitecApi\Teste.Domain\bin\Debug\netcoreapp3.1\Teste.Domain.deps.json
-C:\dev-gentil\Confitec\ConfitecApi\Teste.Domain\bin\Debug\netcoreapp3.1\Teste.Domain.dll
-C:\dev-gentil\Confitec\ConfitecApi\Teste.Domain\bin\Debug\netcoreapp3.1\Teste.Domain.pdb
-C:\dev-gentil\Confitec\ConfitecApi\Teste.Domain\obj\Debug\netcoreapp3.1\Teste.Domain.AssemblyInfoInputs.cache
-C:\dev-gentil\Confitec\ConfitecApi\Teste.Domain\obj\Debug\netcoreapp3.1\Teste.Domain.AssemblyInfo.cs
-C:\dev-gentil\Confitec\ConfitecApi\Teste.Domain\obj\Debug\netcoreapp3.1\Teste.Domain.csproj.CoreCompileInputs.cache
-C:\dev-gentil\Confitec\ConfitecApi\Teste.Domain\obj\Debug\netcoreapp3.1\Teste.Domain.dll
-C:\dev-gentil\Confitec\ConfitecApi\Teste.Domain\obj\Debug\netcoreapp3.1\Teste.Domain.pdb
-C:\dev-gentil\Confitec\ConfitecApi\Teste.Domain\obj\Debug\netcoreapp3.1\Teste.Domain.csprojAssemblyReference.cache
