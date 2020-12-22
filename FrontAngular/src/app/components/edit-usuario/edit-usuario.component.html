@@ -1,0 +1,84 @@
+<!-- Title group  -->
+<div class="title-group">
+  <h1 class="mat-h1">Edição de Usuário</h1>
+  <mat-divider fxFlex="1 0"></mat-divider>
+</div>
+
+<!-- Form -->
+<div class="inner-wrapper">
+  <form [formGroup]="UsuarioForm" (ngSubmit)="updateUsuarioForm()" #resetUsuarioForm="ngForm" novalidate>
+    <!-- Left block -->
+    <mat-card>
+      <div class="controlers-wrapper">
+        <mat-form-field >
+          <input matInput placeholder="Nome" formControlName="nome">
+          <mat-error *ngIf="handleError('nome', 'required')">
+           Preecha o campo corretamente.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Email"  [email]="true"  formControlName="email">
+          <mat-error *ngIf="handleError('email', 'required')">
+            Preecha o campo corretamente.
+          </mat-error>
+          <mat-error *ngIf="handleError('email', 'email')">
+           Preencha um Email válido!
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Escolaridade</mat-label>
+          <mat-select [(ngModel)]="selectedValue" name="idEscolaridade" formControlName="idEscolaridade">
+            <mat-option *ngFor="let item of escolaridades" [value]="item.value">
+              {{item.viewValue}}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="handleError('idEscolaridade', 'required')">
+            Selecione uma escolaridade.
+          </mat-error>
+        </mat-form-field>
+
+      </div>
+    </mat-card>
+
+    <!-- Right block -->
+    <mat-card>
+      <div class="controlers-wrapper">
+        <mat-form-field >
+          <input matInput placeholder="Sobrenome" formControlName="sobrenome">
+          <mat-error *ngIf="handleError('sobrenome', 'required')">
+           Preecha o campo corretamente.
+          </mat-error>
+        </mat-form-field>
+       
+        <mat-form-field>
+          <input matInput readonly [matDatepicker]="picker" placeholder="Data Nascimento"
+            formControlName="dataNascimento" (dateChange)="formatDate($event)">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="handleError('dataNascimento', 'required')">
+            Campo obrigatório.
+          </mat-error>
+          <mat-error *ngIf="handleError('dataNascimento', 'incorrect')">
+            A data de nascimento não pode ser maior que a data de hoje.
+          </mat-error>
+        </mat-form-field>
+
+      </div>
+    </mat-card>
+
+    <!-- Submit & Reset -->
+    <mat-card>
+      <div class="full-wrapper button-wrapper">
+        <div class="button-wrapper">
+          <button mat-flat-button color="warn">Atualizar</button>
+          <button mat-raised-button [routerLink]="['/usuarios-list']" color="primary"
+                                        style="min-width: 0; border: none;">
+                                        <span class='mat-button-wrapper'>Voltar</span>
+                                        <i class='material-icons md-18'>reply</i> </button>
+        </div>
+      </div>
+    </mat-card>
+  </form>
+</div>
